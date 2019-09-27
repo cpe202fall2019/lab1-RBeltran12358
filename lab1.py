@@ -57,7 +57,8 @@ def bin_search(target, low, high, int_list):  # must use recursion
             # so that we can then decide whether to ignore the first half or the second
             # half
             return bin_search(target, mid + 1, high, int_list)
-        else:  # If the mid value is greater than the target, then
+        else:  # If the mid value is greater than the target, then we look at the bottom
+            # half of the list and move our values accordingly
             return bin_search(target, low, mid - 1, int_list)
     else:
         return None  # If target isn't found in the list, this makes sure to
